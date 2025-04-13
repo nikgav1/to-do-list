@@ -2,7 +2,7 @@ import './style.css'
 import createToDo from "./scripts/create-to-do";
 import createBtns from "./scripts/create-btns";
 import { createForm } from "./scripts/create-form";
-import { toLocalStorage, fromLocalStorage } from "./scripts/local-storage";
+import { toLocalStorage } from "./scripts/local-storage";
 import handleButtonsPages from "./scripts/page-handling-button-logic";
 import allToDoCreatingFunction from "./scripts/all-to-dos"
 
