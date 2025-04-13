@@ -15,7 +15,7 @@ function handleFormData(data) {
     toLocalStorage(newToDo);
 }
 function homeCreatingFunction(){
-    console.log('ok')
+    console.log('Will be added later...')
 }
 createBtns('navbar')
 handleButtonsPages('navbar', 'content', homeCreatingFunction, () => createForm('content', handleFormData), () => allToDoCreatingFunction('content'));

@@ -34,13 +34,12 @@ export function createForm(containerId, onSubmitCallback) {
         form.appendChild(inputContainer);
     }
 
-    const priorityLabel = document.createElement("div");
-    priorityLabel.textContent = "Priority:";
-    form.appendChild(priorityLabel);
+    const priorityContainer = document.createElement("div");
+    priorityContainer.classList.add("priority-container");
 
     const priorities = ['low', 'medium', 'high'];
     priorities.forEach(priority => {
-        const radioContainer = document.createElement("div");
+        const radioLabel = document.createElement("label");
 
         const radioInput = document.createElement("input");
         radioInput.type = "radio";
@@ -49,14 +48,14 @@ export function createForm(containerId, onSubmitCallback) {
         radioInput.value = priority;
         radioInput.required = true;
 
-        const radioLabel = document.createElement("label");
         radioLabel.htmlFor = `priority-${priority}`;
         radioLabel.textContent = priority.charAt(0).toUpperCase() + priority.slice(1);
 
-        radioContainer.appendChild(radioInput);
-        radioContainer.appendChild(radioLabel);
-        form.appendChild(radioContainer);
+        radioLabel.prepend(radioInput); 
+        priorityContainer.appendChild(radioLabel);
     });
+
+    form.appendChild(priorityContainer);
 
     const submitBtn = document.createElement("button");
     submitBtn.type = "submit";
