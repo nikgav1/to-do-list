@@ -4,23 +4,23 @@ function clearContent(containerToClear) {
     });
 }
 
-export default function handleButtonsPages(containerWithBtnsId, clearContentId, homeCreatingFunction, formCreatingFunction, projectCreatingFunction) {
+export default function handleButtonsPages(containerWithBtnsId, clearContentId, homeCreatingFunction, formCreatingFunction, allToDoCreatingFunction) {
     const containerToClear = document.getElementById(clearContentId);
     const buttons = Array.from(document.getElementById(containerWithBtnsId).children);
 
     buttons.forEach(btn => {
-        const id = btn.id; // Get the button's id
+        const id = btn.id; 
         btn.addEventListener('click', () => {
-            clearContent(containerToClear); // Clear the content container
+            clearContent(containerToClear); 
             switch (id) {
-                case 'Home': // If the button's id is "Home"
-                    homeCreatingFunction(); // Call the home function
+                case 'Home':
+                    homeCreatingFunction(); 
                     break;
-                case 'All To-Dos': // If the button's id is "Projects"
-                    projectCreatingFunction(); // Call the projects function
+                case 'All To-Dos':
+                    allToDoCreatingFunction();
                     break;
-                case 'New To-Do': // If the button's id is "New To Do"
-                    formCreatingFunction(); // Call the form function
+                case 'New To-Do': 
+                    formCreatingFunction(); 
                     break;
                 default:
                     console.warn(`No function assigned for button with id: ${id}`);

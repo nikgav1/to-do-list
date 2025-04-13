@@ -6,6 +6,7 @@ export function handleForm(event, callback) {
     if (callback) {
         callback(data); // Pass the data to the callback
     }
+    form.reset();
 }
 
 export function createForm(containerId, onSubmitCallback) {

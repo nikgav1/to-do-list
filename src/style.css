@@ -1,0 +1,133 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Navbar Styling */
+#navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #4CAF50;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#navbar button {
+    background-color: #fff;
+    color: #4CAF50;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#navbar button:hover {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+/* Content Area */
+#content {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* To-Do Items */
+.to-do {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.to-do h3 {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.to-do p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.to-do button {
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.to-do button:hover {
+    background-color: #e60000;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="radio"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+form button[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: #45a049;
+}
